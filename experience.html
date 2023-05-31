@@ -51,10 +51,10 @@
             opacity: 0;
             pointer-events: none;
         }
-    </style>  <script type="module" crossorigin src="./assets/js/experience-8cfb3dcd.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/js/app-018537e2.js">
-  <link rel="modulepreload" crossorigin href="./assets/js/index.es-bd5baa57.js">
-  <link rel="stylesheet" href="./assets/css/app-1b252b8c.css">
+    </style>  <script type="module" crossorigin src="./assets/js/experience-ca56aeee.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/js/app-76088f4e.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/index.es-57b9841e.js">
+  <link rel="stylesheet" href="./assets/css/app-524f99eb.css">
 </head>
 <body>
     <div class="loader_"></div>    <header>
@@ -62,7 +62,7 @@
     
             <div class="nav_wrapper">
                 <div class="nav_logo">
-                    <a href="/" class="nav_link">
+                    <a href="./index.html" class="nav_link">
                         <svg version="1.1" x="0px" y="0px" viewBox="0 0 518.8 295" enable-background="new 0 0 518.8 295" xml:space="preserve">
                             <g>
                                 <g id="_5">
@@ -127,41 +127,70 @@
         <div class="nav_mega_menu">
             <div class="inner_">
                 <div class="image_holder">
-    
+                    <div class="menuImg" id="menuImg1">
+                        <img src="./assets/images/menu-icon-about.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg2">
+                        <img src="./assets/images/menu-icon-services.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg3">
+                        <img src="./assets/images/menu-icon-work.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg4">
+                        <img src="./assets/images/menu-icon1.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg5">
+                        <img src="./assets/images/menu-icon1.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg6">
+                        <img src="./assets/images/menu-icon1.svg" />
+                    </div>
                 </div>
-    
                 <div class="nav_listing">
                     <nav>
                         <ul>
                             <li class="nav_item">
-                                <a href="/about.html" class="nav_link"><span>About</span></a>
+                                <a href="./about.html" class="nav_link" data-imgsource="menuImg1"><span>About</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/services.html" class="nav_link"><span>Services</span></a>
+                                <a href="./services.html" class="nav_link"  data-imgsource="menuImg2"><span>Services</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/works.html" class="nav_link"><span>Work</span></a>
+                                <a href="./works.html" class="nav_link" data-imgsource="menuImg3"><span>Work</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/experience.html" class="nav_link"><span>Experience</span></a>
+                                <a href="./experience.html" class="nav_link"  data-imgsource="menuImg4"><span>Experience</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/join.html" class="nav_link"><span>Join us</span></a>
+                                <a href="./join.html" class="nav_link"  data-imgsource="menuImg5"><span>Join us</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/contact.html" class="nav_link"><span>Contact us</span></a>
+                                <a href="./contact.html" class="nav_link"  data-imgsource="menuImg6"><span>Contact us</span></a>
                             </li> 
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-    </header>
-    <main class="main_auto">
+    </header>    <div class="bg_particle_wrapper" data-bg-particle>
+        <video loop autoplay playsinline muted preload="none" id="bg_video">
+            <source src="" type="video/mp4">
+        </video>
+    </div> 
+    
+    <script>
+        const videoEl = document.getElementById('bg_video') 
+        const videoRequest = fetch("./assets/videos/bg-particle.mp4")
+        .then(response => response.blob());
+    
+        videoRequest.then(blob => {
+            videoEl.src = window.URL.createObjectURL(blob);
+        }); 
+    </script>    <main class="innerMain">
         <section class="experience_section">
 
             <div class="bg_">
-                <video loop playsinline muted autoplay data-video>
+                <video loop playsinline muted autoplay data-video preload="none" id="exp_video">
                     <source src="./assets/videos/x.mp4" type="video/mp4">
                 </video>
             </div>
@@ -188,9 +217,29 @@
             </div>
 
         </section>
-    </main>
 
-    
+        <script>
+            const expVideo = document.getElementById('exp_video') 
+            const expVideoReq = fetch("./assets/videos/x.mp4")
+            .then(response => response.blob());
+        
+            expVideoReq.then(blob => {
+                expVideo.src = window.URL.createObjectURL(blob);
+            }); 
+        </script>
+
+    </main>
+    <footer>
+        <div class="contact_footer">
+            <ul>
+                <li><p>&copy; 2023 528</p></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Tiktok</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>    
     
 
 </body>

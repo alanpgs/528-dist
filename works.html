@@ -51,15 +51,15 @@
             opacity: 0;
             pointer-events: none;
         }
-    </style>  <script type="module" crossorigin src="./assets/js/works-4f34c407.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/js/app-018537e2.js">
-  <link rel="modulepreload" crossorigin href="./assets/js/animationControls-26502635.js">
-  <link rel="modulepreload" crossorigin href="./assets/js/index.es-bd5baa57.js">
-  <link rel="modulepreload" crossorigin href="./assets/js/index.es-9bdd86a3.js">
-  <link rel="modulepreload" crossorigin href="./assets/js/in-view.es-4f7b8448.js">
+    </style>  <script type="module" crossorigin src="./assets/js/works-224096b2.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/js/app-76088f4e.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/animationControls-dbbe5daa.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/index.es-57b9841e.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/index.es-0431e4d5.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/in-view.es-5ebd3462.js">
   <link rel="modulepreload" crossorigin href="./assets/js/_select-fdf1cf9a.js">
   <link rel="modulepreload" crossorigin href="./assets/js/swiper.min-0baa4990.js">
-  <link rel="stylesheet" href="./assets/css/app-1b252b8c.css">
+  <link rel="stylesheet" href="./assets/css/app-524f99eb.css">
   <link rel="stylesheet" href="./assets/css/_select-527237d2.css">
   <link rel="stylesheet" href="./assets/css/swiper-b099ecf4.css">
   <link rel="stylesheet" href="./assets/css/works-7679bc80.css">
@@ -70,7 +70,7 @@
     
             <div class="nav_wrapper">
                 <div class="nav_logo">
-                    <a href="/" class="nav_link">
+                    <a href="./index.html" class="nav_link">
                         <svg version="1.1" x="0px" y="0px" viewBox="0 0 518.8 295" enable-background="new 0 0 518.8 295" xml:space="preserve">
                             <g>
                                 <g id="_5">
@@ -135,40 +135,70 @@
         <div class="nav_mega_menu">
             <div class="inner_">
                 <div class="image_holder">
-    
+                    <div class="menuImg" id="menuImg1">
+                        <img src="./assets/images/menu-icon-about.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg2">
+                        <img src="./assets/images/menu-icon-services.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg3">
+                        <img src="./assets/images/menu-icon-work.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg4">
+                        <img src="./assets/images/menu-icon1.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg5">
+                        <img src="./assets/images/menu-icon1.svg" />
+                    </div>
+                    <div class="menuImg" id="menuImg6">
+                        <img src="./assets/images/menu-icon1.svg" />
+                    </div>
                 </div>
-    
                 <div class="nav_listing">
                     <nav>
                         <ul>
                             <li class="nav_item">
-                                <a href="/about.html" class="nav_link"><span>About</span></a>
+                                <a href="./about.html" class="nav_link" data-imgsource="menuImg1"><span>About</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/services.html" class="nav_link"><span>Services</span></a>
+                                <a href="./services.html" class="nav_link"  data-imgsource="menuImg2"><span>Services</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/works.html" class="nav_link"><span>Work</span></a>
+                                <a href="./works.html" class="nav_link" data-imgsource="menuImg3"><span>Work</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/experience.html" class="nav_link"><span>Experience</span></a>
+                                <a href="./experience.html" class="nav_link"  data-imgsource="menuImg4"><span>Experience</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/join.html" class="nav_link"><span>Join us</span></a>
+                                <a href="./join.html" class="nav_link"  data-imgsource="menuImg5"><span>Join us</span></a>
                             </li> 
                             <li class="nav_item">
-                                <a href="/contact.html" class="nav_link"><span>Contact us</span></a>
+                                <a href="./contact.html" class="nav_link"  data-imgsource="menuImg6"><span>Contact us</span></a>
                             </li> 
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-    </header>    <main class="main_auto">
+    </header>    <div class="bg_particle_wrapper" data-bg-particle>
+        <video loop autoplay playsinline muted preload="none" id="bg_video">
+            <source src="" type="video/mp4">
+        </video>
+    </div> 
+    
+    <script>
+        const videoEl = document.getElementById('bg_video') 
+        const videoRequest = fetch("./assets/videos/bg-particle.mp4")
+        .then(response => response.blob());
+    
+        videoRequest.then(blob => {
+            videoEl.src = window.URL.createObjectURL(blob);
+        }); 
+    </script>    <main class="main_auto innerMain">
         <section class="section_page_title">
             <div class="inner_">
                  <div class="title_">
-                     <h1><span>Works</span></h1>
+                     <h1><span>Work</span></h1>
                  </div>
             </div>
         </section> 
@@ -198,22 +228,22 @@
 
                                     <div class="swiper-slide">
                                         <h4>Project title one will go here</h4>
-                                        <a href="/work-details.html" class="btn_link"><span>View Case Study</span></a>
+                                        <a href="./work-details.html" class="btn_link"><span>View Case Study</span></a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <h4>Project title one will go here</h4>
-                                        <a href="/work-details.html" class="btn_link"><span>View Case Study</span></a>
+                                        <a href="./work-details.html" class="btn_link"><span>View Case Study</span></a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <h4>Project title one will go here</h4>
-                                        <a href="/work-details.html" class="btn_link"><span>View Case Study</span></a>
+                                        <a href="./work-details.html" class="btn_link"><span>View Case Study</span></a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <h4>Project title one will go here</h4>
-                                        <a href="/work-details.html" class="btn_link"><span>View Case Study</span></a>
+                                        <a href="./work-details.html" class="btn_link"><span>View Case Study</span></a>
                                     </div>
 
                                 </div>
@@ -221,7 +251,7 @@
                         </div>
 
                         <div class="btn_group">
-                            <a href="/work-listing.html" class="btn_"><span>View All Case Studies</span></a>
+                            <a href="./work-listing.html" class="btn_"><span>View All Case Studies</span></a>
 
                             <button class="btn_icon prev_">
                                 <svg width="22.857" height="24.041" viewBox="0 0 22.857 24.041">
